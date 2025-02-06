@@ -13,44 +13,45 @@ Restaurant Application: (Web/Mobile) for restaurant staff to manage incoming ord
 
 <b>YARP:</b> Acts as the gateway routing client and restaurant requests to the appropriate microservices.
 
-Command Services:
+<h4>Command Services:</h4>
 
-Order Service: Handles order creation, updates, and deletion. Stores data in MS SQL Server.
+<b>Order Service:</b> Handles order creation, updates, and deletion. Stores data in MS SQL Server.
 
-Customer Service: Manages customer profiles and information. Stores data in MS SQL Server.
+<b>Customer Service:</b> Manages customer profiles and information. Stores data in MS SQL Server.
 
-Restaurant Service: Manages restaurant profiles, menus, and information. Stores data in MS SQL Server.
+<b>Restaurant Service:</b> Manages restaurant profiles, menus, and information. Stores data in MS SQL Server.
 
-Query Services:
+<h4>Query Services:</h4>
 
-Order Query Service: Retrieves order data from Redis for fast access.
+<b>Order Query Service:</b> Retrieves order data from Redis for fast access.
 
-Customer Query Service: Retrieves customer data from Redis.
+<b>Customer Query Service:</b> Retrieves customer data from Redis.
 
-Restaurant Query Service: Retrieves restaurant data from Redis.
+<b>Restaurant Query Service:</b> Retrieves restaurant data from Redis.
 
-Messaging:
+<h4>Messaging:</h4>
 
-MassTransit with RabbitMQ: Ensures reliable communication between services. Handles events such as order placement, updates, and status changes.
+<b>MassTransit with RabbitMQ:</b> Ensures reliable communication between services. Handles events such as order placement, updates, and status changes.
 
-3. Database:
+<h3>3. Database:</h3>
 
-MS SQL Server: Stores transactional data for orders, customers, and restaurants.
+<b>MS SQL Server:</b> Stores transactional data for orders, customers, and restaurants.
 
-Redis: Acts as a caching layer for fast query responses and temporary data storage.
+<b>Redis:</b> Acts as a caching layer for fast query responses and temporary data storage.
 
-4. Backoffice:
+<h3>4. Backoffice:</h3>
 
-Admin Portal: Web application for administrators to manage clients (customers and restaurants), monitor system performance, and generate reports.
+<b>Admin Portal:</b> Web application for administrators to manage clients (customers and restaurants), monitor system performance, and generate reports.
 
-Backoffice Services:
+<h4>Backoffice Services:</h4>
 
-Client Management Service: Manages clients and their data.
+<b>Client Management Service:</b> Manages clients and their data.
 
-Reporting Service: Generates reports on orders, customers, and restaurant performance.
+<b>Reporting Service:</b> Generates reports on orders, customers, and restaurant performance.
 
-Data Flow:
-Client Places Order:
+<h3>Data Flow:</h3>
+
+<h4>Client Places Order:</h4>
 
 Client app sends order request to the API Gateway.
 
@@ -60,7 +61,7 @@ Order Service stores order data in MS SQL Server and sends an event to RabbitMQ.
 
 RabbitMQ forwards the event to the necessary services (e.g., Restaurant Service, Notification Service).
 
-Order Processing:
+<h4>Order Processing:</h4>
 
 Restaurant Service updates the restaurant with new order details.
 
@@ -70,7 +71,7 @@ Status updates are sent through RabbitMQ to the Order Service.
 
 Order Service updates order status in MS SQL Server and caches the new status in Redis.
 
-Querying Data:
+<h4>Querying Data:</h4>
 
 Client app requests order status from the API Gateway.
 
@@ -78,20 +79,20 @@ API Gateway routes the request to the Order Query Service.
 
 Order Query Service retrieves the data from Redis and sends it back to the client app.
 
-Benefits:
+<h3>Benefits:</h3>
 Scalability: Decoupled services with MassTransit and RabbitMQ enable easy scaling.
 
 Performance: Using Redis for queries ensures fast data retrieval.
 
 Flexibility: YARP allows easy routing and service management.
 
-Technology Stack:
-MS SQL Server: For command storage.
+<h3>Technology Stack:</h3>
+<b>MS SQL Server:</b> For command storage.
 
-Redis: For query caching.
+<b>Redis:</b> For query caching.
 
-MassTransit: For messaging.
+<b>MassTransit:</b> For messaging.
 
-RabbitMQ: As the message broker.
+<b>RabbitMQ:</b> As the message broker.
 
-YARP: For API Gateway.
+<b>YARP:</b> For API Gateway.
