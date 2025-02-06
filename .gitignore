@@ -6,3 +6,7 @@
 /src/FoodWala/BuildingBlocks/obj
 /src/FoodWala/BuildingBlocks.Messaging/obj
 /src/FoodWala/YarpApiGateway/obj
+/src/FoodWala/Client.API/obj
+/src/FoodWala/Client.Application/obj
+/src/FoodWala/Client.Domain/obj
+/src/FoodWala/Client.Infrastructure/obj
