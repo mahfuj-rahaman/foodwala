@@ -3,3 +3,6 @@
 ################################################################################
 
 /src/FoodWala/.vs/FoodWala
+/src/FoodWala/BuildingBlocks/obj
+/src/FoodWala/BuildingBlocks.Messaging/obj
+/src/FoodWala/YarpApiGateway/obj
