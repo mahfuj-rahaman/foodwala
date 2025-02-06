@@ -1,6 +1,6 @@
-# foodwala
+# <h1>Food Wala</h1>
 
-<h2>FoodWala High-Level Architecture</h1>
+<h2>Food Wala High-Level Architecture</h2>
 <h3>1. Frontend:</h3>
 
 Client Application: (Web/Mobile) for customers to browse menus, place orders, and track deliveries.
