@@ -1,17 +1,17 @@
 # <h1>Food Wala</h1>
 
 <h2>Food Wala High-Level Architecture</h2>
-<h3><u> 1. Frontend:</u></h3>
+<h3>1. Frontend:</h3>
 
 Client Application: (Web/Mobile) for customers to browse menus, place orders, and track deliveries.
 
 Restaurant Application: (Web/Mobile) for restaurant staff to manage incoming orders, update menus, and track order status.
 
-2. Backend Services:
+<h3>2. Backend Services:</h3>
 
-API Gateway:
+<h4>API Gateway:</h4>
 
-YARP: Acts as the gateway routing client and restaurant requests to the appropriate microservices.
+<b>YARP:</b> Acts as the gateway routing client and restaurant requests to the appropriate microservices.
 
 Command Services:
 
